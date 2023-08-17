@@ -7,8 +7,8 @@ namespace Yella
 		public App()
 		{
 			InitializeComponent();
-			//MainPage = new AppShell();
-			MainPage = new NavigationPage(new IntroPage());
+			MainPage = new AppShell();
+			//MainPage = new NavigationPage(new IntroPage());
 		}
 	}
 }

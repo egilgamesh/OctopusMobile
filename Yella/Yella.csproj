@@ -124,7 +124,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\Intro\" />
+	  <MauiImage Include="Resources\Images\Intro\intro1.png" />
+	  <MauiImage Include="Resources\Images\Intro\intro2.jpeg" />
 	</ItemGroup>
 
 </Project>
