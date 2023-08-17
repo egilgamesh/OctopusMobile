@@ -70,10 +70,14 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appicon.svg" Color="#512BD4" />
+		<MauiSplashScreen Include="Resources\Images\splash.png">
+		  <Color>#ffffff</Color>
+		  <BaseSize>512,512</BaseSize>
+		</MauiSplashScreen>
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#ffffff" BaseSize="512,512" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#ffffff" BaseSize="512,512" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -87,7 +91,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\splash.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\octopus.png" />
+	  <None Remove="Resources\Images\splash.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -106,9 +115,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="views\IntroPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="views\MainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\Intro\" />
 	</ItemGroup>
 
 </Project>

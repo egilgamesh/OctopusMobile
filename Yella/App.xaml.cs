@@ -1,4 +1,6 @@
-﻿namespace Yella
+﻿using Yella.views;
+
+namespace Yella
 {
 	public partial class App : Application
 	{
@@ -6,7 +8,7 @@
 		{
 			InitializeComponent();
 			//MainPage = new AppShell();
-			MainPage = new NavigationPage(new LoginPage());
+			MainPage = new NavigationPage(new IntroPage());
 		}
 	}
 }

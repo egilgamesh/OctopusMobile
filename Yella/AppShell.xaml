@@ -3,12 +3,12 @@
     x:Class="Yella.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Yella"
+    xmlns:local="clr-namespace:Yella.views"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title=""
-        ContentTemplate="{DataTemplate local:LoginPage}"
-        Route="LoginPage" />
+        ContentTemplate="{DataTemplate local:IntroPage}"
+        Route="IntroPage" />
 
 </Shell>
