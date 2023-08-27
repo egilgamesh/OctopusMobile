@@ -5,11 +5,12 @@
 						xmlns:yella="clr-namespace:Yella"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False">
 	<ContentPage.Content>
-		<!--<Grid RowDefinitions="2*, 6*, 0.5*,12*">-->
-<StackLayout Orientation="Vertical" Spacing="0">
+		<Grid RowDefinitions="2*, 6*, 1.5*,12*">
 
 			<!--<StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="White">-->
-			<Frame CornerRadius="0" Padding="0">
+			<Frame Grid.Row="0" CornerRadius="0">
+
+			</Frame>
 			<Grid Margin="25" ColumnDefinitions="7*,9*,2*,1*">
 				<Image Grid.Column="0" x:Name="HomePageTitle" Source="yella" WidthRequest="180"></Image>
 				<Image Grid.Column="2" Source="octopus" WidthRequest="50" HeightRequest="50">
@@ -18,8 +19,6 @@
 					</Image.Clip>
 				</Image>
 			</Grid>
-			</Frame>
-
 
 			<!--</StackLayout>-->
 
@@ -31,7 +30,7 @@
 				</Frame>
 			</StackLayout>
 
-			<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="225">
+			<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="250">
 				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
 				<Label Text="الطلبات" TextColor="{x:StaticResource Gray500}"></Label>
 			</StackLayout>
@@ -77,8 +76,6 @@
 
 			</ScrollView>
 
-		<!--</Grid>-->
-</StackLayout>
-
+		</Grid>
 	</ContentPage.Content>
 </ContentPage>
