@@ -5,30 +5,80 @@
 						xmlns:yella="clr-namespace:Yella"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False">
 	<ContentPage.Content>
-		<Grid RowDefinitions="2*, 6*, 1.5*,12*">
+		<!--<Grid RowDefinitions="2*, 6*, 0.5*,12*">-->
+<StackLayout Orientation="Vertical" Spacing="0">
 
 			<!--<StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="White">-->
-				<Grid Grid.Row="0" Margin="25" ColumnDefinitions="7*,9*,2*,1*">
-					<Image Grid.Column="0" x:Name="HomePageTitle" Source="yella" WidthRequest="180"></Image>
-					<Image Grid.Column="2" Source="octopus" WidthRequest="50" HeightRequest="50">
-						<Image.Clip>
-							<EllipseGeometry Center="25,25" RadiusX="15" RadiusY="15" />
-						</Image.Clip>
-					</Image>
-				</Grid>
+			<Frame CornerRadius="0" Padding="0">
+			<Grid Margin="25" ColumnDefinitions="7*,9*,2*,1*">
+				<Image Grid.Column="0" x:Name="HomePageTitle" Source="yella" WidthRequest="180"></Image>
+				<Image Grid.Column="2" Source="octopus" WidthRequest="50" HeightRequest="50">
+					<Image.Clip>
+						<EllipseGeometry Center="25,25" RadiusX="15" RadiusY="15" />
+					</Image.Clip>
+				</Image>
+			</Grid>
+			</Frame>
+
 
 			<!--</StackLayout>-->
 
-			<Frame Grid.Row="1" BackgroundColor="AntiqueWhite">
 
-			</Frame>
-			<Frame Grid.Row="2" BackgroundColor="AntiqueWhite">
+			<StackLayout Grid.Row="1" Padding="20">
+				<Frame BackgroundColor="Gray" CornerRadius="5" Padding="10">
+					<Image Source="credit3" WidthRequest="210" HeightRequest="140"></Image>
 
-			</Frame>
-			<Frame Grid.Row="3" BackgroundColor="AntiqueWhite">
+				</Frame>
+			</StackLayout>
 
-			</Frame>
+			<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="225">
+				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
+				<Label Text="الطلبات" TextColor="{x:StaticResource Gray500}"></Label>
+			</StackLayout>
+			<ScrollView Grid.Row="3">
+				<StackLayout Padding="0">
+					<Grid RowDefinitions="2*,4*,2*" RowSpacing="0" ColumnSpacing="5" ColumnDefinitions="2*,0.05*,2*"
+								Margin="20,0,20,20">
+						<Frame Grid.Row="0" Grid.Column="0" BorderColor="Transparent" Padding="0">
+							<Image Source="orders" WidthRequest="150" HeightRequest="150"></Image>
+						</Frame>
+						<Frame Grid.Row="0" Grid.Column="2" CornerRadius="0" Padding="0" BorderColor="Transparent">
+							<Image Source="courier" WidthRequest="150" HeightRequest="150"></Image>
+						</Frame>
+						<Frame Grid.Row="2" Grid.Column="0" BorderColor="Transparent" Padding="0">
+							<Image Source="returnsorder" WidthRequest="150" HeightRequest="150"></Image>
+						</Frame>
+						<Frame Grid.Row="2" Grid.Column="2" BorderColor="Transparent" Padding="0">
+							<Image Source="completedorder" WidthRequest="150" HeightRequest="150"></Image>
+						</Frame>
+					</Grid>
+					<StackLayout Spacing="10" Margin="0">
+						<Frame CornerRadius="0" BackgroundColor="White" BorderColor="Transparent">
+						</Frame>
+					</StackLayout>
 
-		</Grid>
+					<Grid RowDefinitions="2*,4*,2*" RowSpacing="10" ColumnSpacing="10" ColumnDefinitions="2*,0.05*,2*"
+								Margin="20,0,20,20">
+						<Frame Grid.Row="0" Grid.Column="0">
+							<Image Source="orders" WidthRequest="100" HeightRequest="100"></Image>
+						</Frame>
+						<Frame Grid.Row="0" Grid.Column="2">
+							<Image Source="courier" WidthRequest="100" HeightRequest="100"></Image>
+						</Frame>
+						<Frame Grid.Row="2" Grid.Column="0">
+							<Image Source="returnsorder" WidthRequest="100" HeightRequest="100"></Image>
+						</Frame>
+						<Frame Grid.Row="2" Grid.Column="2">
+							<Image Source="completedorder" WidthRequest="100" HeightRequest="100"></Image>
+						</Frame>
+					</Grid>
+				</StackLayout>
+
+
+			</ScrollView>
+
+		<!--</Grid>-->
+</StackLayout>
+
 	</ContentPage.Content>
 </ContentPage>
