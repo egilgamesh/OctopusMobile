@@ -5,7 +5,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks>net7.0-ios;net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
@@ -87,7 +87,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\bars-solid.svg" />
+	  <None Remove="Resources\Images\check-to-slot-solid.svg" />
+	  <None Remove="Resources\Images\circle-plus-solid.svg" />
+	  <None Remove="Resources\Images\ellipsis-solid.svg" />
+	  <None Remove="Resources\Images\ellipsis-vertical-solid.svg" />
+	  <None Remove="Resources\Images\file-invoice-dollar-solid.svg" />
+	  <None Remove="Resources\Images\house-solid.svg" />
+	  <None Remove="Resources\Images\location-arrow-solid.svg" />
+	  <None Remove="Resources\Images\map-location-dot-solid.svg" />
+	  <None Remove="Resources\Images\money-dollar-solid.svg" />
 	  <None Remove="Resources\Images\octopus.png" />
+	  <None Remove="Resources\Images\sack-dollar-solid.svg" />
+	  <None Remove="Resources\Images\sheet-solid.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -97,27 +109,57 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="LoginPage.xaml.cs">
+	  <Compile Update="views\LoginPage.xaml.cs">
 	    <DependentUpon>LoginPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="views\MainPage.xaml.cs">
-	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  <Compile Update="views\BalancePage.xaml.cs">
+	    <DependentUpon>BalancePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="views\HomePage.xaml.cs">
+	    <DependentUpon>HomePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="views\NewOrderPage.xaml.cs">
+	    <DependentUpon>NewOrderPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="views\SettingsPage.xaml.cs">
+	    <DependentUpon>SettingsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="views\TrackPage.xaml.cs">
+	    <DependentUpon>TrackPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="views\DashboardView.xaml">
+	  <MauiXaml Update="views\BalancePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="views\IntroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="views\MainPage.xaml">
+	  <MauiXaml Update="views\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="views\NewOrderPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="views\TrackPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Images\icons\bars_solid.svg" />
+	  <MauiImage Include="Resources\Images\icons\check_slot_solid.svg" />
+	  <MauiImage Include="Resources\Images\icons\circlesolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\ellipsissolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\ellipsisverticalsolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\fileinvoicedollar.svg" />
+	  <MauiImage Include="Resources\Images\icons\housesolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\locationarrowsolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\maplocationdotsolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\moneydollarsolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\sackdollarsolid.svg" />
+	  <MauiImage Include="Resources\Images\icons\sheetsolid.svg" />
 	  <MauiImage Include="Resources\Images\Intro\intro1.png" />
 	  <MauiImage Include="Resources\Images\Intro\intro2.jpeg" />
 	</ItemGroup>

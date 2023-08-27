@@ -1,18 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <Shell
-    x:Class="Yella.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Yella.views"
-		Shell.FlyoutBehavior="Disabled">
+	x:Class="Yella.AppShell"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:Yella.views"
+	Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title=""
-        ContentTemplate="{DataTemplate local:IntroPage}"
-        Route="IntroPage" />
-
-       <ShellContent
-        Title="Dashboard"
-        ContentTemplate="{DataTemplate local:DashboardView}"
-        Route="DashboardView" />
+	<ShellContent
+		Title=""
+		ContentTemplate="{DataTemplate local:IntroPage}"
+		Route="IntroPage" />
+	<TabBar Route="DashboardTab">
+		<Tab Title="Home" Icon="housesolid">
+			<ShellContent
+				ContentTemplate="{DataTemplate local:HomePage}"
+				Route="HomePage" />
+		</Tab>
+		<Tab Title="Balance" Icon="fileinvoicedollar" >
+			<ShellContent
+				ContentTemplate="{DataTemplate local:BalancePage}"
+				Route="BalancePage" />
+		</Tab>
+		<Tab Title="New" Icon="circlesolid">
+			<ShellContent
+				ContentTemplate="{DataTemplate local:NewOrderPage}"
+				Route="NewOrderPage" />
+		</Tab>
+		<Tab Title="Track" Icon="check_slot_solid">
+			<ShellContent
+				ContentTemplate="{DataTemplate local:TrackPage}"
+				Route="TrackPage" />
+		</Tab>
+		<Tab Title="Setting" Icon="ellipsissolid">
+			<ShellContent
+				ContentTemplate="{DataTemplate local:SettingsPage}"
+				Route="SettingsPage" />
+		</Tab>
+	</TabBar>
 </Shell>

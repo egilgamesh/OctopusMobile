@@ -25,5 +25,5 @@ public class IntroPageViewModel
 	public ObservableCollection<IntroPageModel> IntoScreens { get; } = new();
 	public ICommand SigningCommand =>
 		new Command(execute: async () =>
-			await Shell.Current!.GoToAsync($"//{nameof(views.DashboardView)}")!.ConfigureAwait(false));
+			await Shell.Current!.GoToAsync($"//{nameof(views.HomePage)}")!.ConfigureAwait(false));
 }

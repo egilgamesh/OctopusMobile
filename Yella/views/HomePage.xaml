@@ -2,7 +2,8 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-						x:Class="Yella.views.MainPage" Shell.NavBarIsVisible="False">
+						xmlns:yella="clr-namespace:Yella"
+						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False">
 	<ContentPage.Content>
 		<Grid>
 			<Grid.ColumnDefinitions>
@@ -14,11 +15,9 @@
 				<RowDefinition Height="4*"></RowDefinition>
 				<RowDefinition Height="2*"></RowDefinition>
 			</Grid.RowDefinitions>
-            <Button Grid.Row="1" Grid.Column="1"
-                x:Name="HelloButton"
-                Text="Enjoy me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                HorizontalOptions="Center" />
+
+
+
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

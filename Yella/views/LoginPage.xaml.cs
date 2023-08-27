@@ -1,10 +1,7 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CommunityToolkit.Maui.Alerts;
+﻿using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
-using Yella.views;
 
-namespace Yella;
+namespace Yella.views;
 
 public partial class LoginPage : ContentPage
 {
@@ -16,7 +13,7 @@ public partial class LoginPage : ContentPage
 		if (IsUserCredentialLoginValid())
 		{
 			//DisplayAlert("Connected", "alert", "Hi");
-			await Navigation!.PushAsync(new MainPage(), true)!.ConfigureAwait(false);
+			await Navigation!.PushAsync(new HomePage(), true)!.ConfigureAwait(false);
 		}
 		await Toast.Make("Your Credential Wrong!, Please contact your Help Desk.", ToastDuration.Long, 16).
 			Show(cancellationTokenSource.Token).ConfigureAwait(false);
