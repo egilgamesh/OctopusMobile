@@ -6,6 +6,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-ios;net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
+		<!--<TargetFrameworks> net7.0-android;</TargetFrameworks>-->
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net7.0-tizen</TargetFrameworks> -->
@@ -19,7 +20,7 @@
 		<ApplicationTitle>Yella</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.yella</ApplicationId>
+		<ApplicationId>com.octopus.yella</ApplicationId>
 		<ApplicationIdGuid>6ce40959-2257-499d-a353-1d87e1de7e05</ApplicationIdGuid>
 
 		<!-- Versions -->

@@ -5,18 +5,29 @@
 						xmlns:yella="clr-namespace:Yella"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False">
 	<ContentPage.Content>
-		<Grid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width=".3*"></ColumnDefinition>
-				<ColumnDefinition Width="500*"></ColumnDefinition>
-				<ColumnDefinition Width=".3*"></ColumnDefinition>
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="4*"></RowDefinition>
-				<RowDefinition Height="2*"></RowDefinition>
-			</Grid.RowDefinitions>
+		<Grid RowDefinitions="2*, 6*, 1.5*,12*">
 
+			<!--<StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="White">-->
+				<Grid Grid.Row="0" Margin="25" ColumnDefinitions="7*,9*,2*,1*">
+					<Image Grid.Column="0" x:Name="HomePageTitle" Source="yella" WidthRequest="180"></Image>
+					<Image Grid.Column="2" Source="octopus" WidthRequest="50" HeightRequest="50">
+						<Image.Clip>
+							<EllipseGeometry Center="25,25" RadiusX="15" RadiusY="15" />
+						</Image.Clip>
+					</Image>
+				</Grid>
 
+			<!--</StackLayout>-->
+
+			<Frame Grid.Row="1" BackgroundColor="AntiqueWhite">
+
+			</Frame>
+			<Frame Grid.Row="2" BackgroundColor="AntiqueWhite">
+
+			</Frame>
+			<Frame Grid.Row="3" BackgroundColor="AntiqueWhite">
+
+			</Frame>
 
 		</Grid>
 	</ContentPage.Content>
