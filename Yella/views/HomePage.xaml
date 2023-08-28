@@ -7,18 +7,20 @@
 	<ContentPage.Content>
 		<Grid RowDefinitions="2*, 6*, 1.5*,12*">
 
-			<!--<StackLayout Orientation="Horizontal" Grid.Row="0" BackgroundColor="White">-->
-			<Frame Grid.Row="0" CornerRadius="0">
+			<Frame Grid.Row="0" CornerRadius="0" BackgroundColor="{x:StaticResource White}" HasShadow="True"
+						HeightRequest="65" Padding="0,10" BorderColor="{x:StaticResource White}">
 
+				<Grid>
+					<ImageButton x:Name="Profile" Source="notification" WidthRequest="25" 
+											HorizontalOptions="End" Margin="20,0"/>
+					<ImageButton x:Name="HomePageTitle" Source="yella" WidthRequest="180" HorizontalOptions="Start" Margin="20,0" />
+
+					<!--<ImageButton x:Name="settings" Source="ellipsisverticalsolid" WidthRequest="10"
+											HorizontalOptions="Start" Margin="25,0" />-->
+
+				</Grid>
 			</Frame>
-			<Grid Margin="25" ColumnDefinitions="7*,9*,2*,1*">
-				<Image Grid.Column="0" x:Name="HomePageTitle" Source="yella" WidthRequest="180"></Image>
-				<Image Grid.Column="2" Source="octopus" WidthRequest="50" HeightRequest="50">
-					<Image.Clip>
-						<EllipseGeometry Center="25,25" RadiusX="15" RadiusY="15" />
-					</Image.Clip>
-				</Image>
-			</Grid>
+
 
 			<!--</StackLayout>-->
 
@@ -30,7 +32,7 @@
 				</Frame>
 			</StackLayout>
 
-			<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="250">
+			<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
 				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
 				<Label Text="الطلبات" TextColor="{x:StaticResource Gray500}"></Label>
 			</StackLayout>
