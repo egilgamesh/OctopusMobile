@@ -165,4 +165,6 @@
 	  <MauiImage Include="Resources\Images\Intro\intro2.jpeg" />
 	</ItemGroup>
 
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionYellaHideInfoBar="True" /></VisualStudio></ProjectExtensions>
+
 </Project>
