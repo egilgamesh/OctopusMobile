@@ -442,7 +442,7 @@
 		<Setter Property="Shell.TabBarUnselectedColor"
 						Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray200}}" />
 	</Style>
-	//old
+
 
 
 	<Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
