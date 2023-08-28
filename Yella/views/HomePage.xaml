@@ -5,21 +5,65 @@
 						xmlns:yella="clr-namespace:Yella"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False">
 	<ContentPage.Content>
-		<Grid RowDefinitions="2*, 6*, 1.5*,12*">
+		<Grid x:Name="MainContentGrid" Padding="24,52,24,0"
+       IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+       BackgroundColor="{x:StaticResource PageBackgroundColor}"
+       ColumnDefinitions="*,Auto"
+       RowDefinitions="Auto,*">
 
-			<Frame Grid.Row="0" CornerRadius="0" BackgroundColor="{x:StaticResource White}" HasShadow="True"
-						HeightRequest="65" Padding="0,10" BorderColor="{x:StaticResource White}">
+			            <!-- Header Text -->
+			<VerticalStackLayout
+                Spacing="4"
+                Grid.Row="0"
+                Grid.Column="0"
+                VerticalOptions="Center">
 
-				<Grid>
-					<ImageButton x:Name="Profile" Source="notification" WidthRequest="25" 
-											HorizontalOptions="End" Margin="20,0"/>
-					<ImageButton x:Name="HomePageTitle" Source="yella" WidthRequest="180" HorizontalOptions="Start" Margin="20,0" />
+                <Label
+                    Style="{StaticResource PageHeaderStyle}"
+                    Text="Let's Explore"/>
 
-					<!--<ImageButton x:Name="settings" Source="ellipsisverticalsolid" WidthRequest="10"
-											HorizontalOptions="Start" Margin="25,0" />-->
+                <Label
+                    Style="{StaticResource PageHeaderSubtitleStyle}"
+                    Text="The express way with yella"/>
+            </VerticalStackLayout>
 
-				</Grid>
-			</Frame>
+			            <!-- Profile Pic -->
+            <Border
+                WidthRequest="56"
+                HeightRequest="56"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                Stroke="{x:StaticResource LightBorderColor}"
+                StrokeThickness="6"
+                Grid.Row="0"
+                Grid.Column="1">
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="28"/>
+                </Border.StrokeShape>
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ProfilePic_Clicked" />
+                </Border.GestureRecognizers>
+
+                <Image
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    Source="octopus.png">
+                    <Image.Clip>
+                        <EllipseGeometry
+                            Center="25,25"
+                            RadiusX="25"
+                            RadiusY="25"/>
+                    </Image.Clip>
+                </Image>
+
+            </Border>
+
+
+
 
 
 			<!--</StackLayout>-->
@@ -32,49 +76,19 @@
 				</Frame>
 			</StackLayout>
 
-			<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
+			<!--<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
 				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
 				<Label Text="الطلبات" TextColor="{x:StaticResource Gray500}"></Label>
-			</StackLayout>
-			<ScrollView Grid.Row="3">
-				<StackLayout Padding="0">
-					<Grid RowDefinitions="2*,4*,2*" RowSpacing="0" ColumnSpacing="5" ColumnDefinitions="2*,0.05*,2*"
-								Margin="20,0,20,20">
-						<Frame Grid.Row="0" Grid.Column="0" BorderColor="Transparent" Padding="0">
-							<Image Source="orders" WidthRequest="150" HeightRequest="150"></Image>
-						</Frame>
-						<Frame Grid.Row="0" Grid.Column="2" CornerRadius="0" Padding="0" BorderColor="Transparent">
-							<Image Source="courier" WidthRequest="150" HeightRequest="150"></Image>
-						</Frame>
-						<Frame Grid.Row="2" Grid.Column="0" BorderColor="Transparent" Padding="0">
-							<Image Source="returnsorder" WidthRequest="150" HeightRequest="150"></Image>
-						</Frame>
-						<Frame Grid.Row="2" Grid.Column="2" BorderColor="Transparent" Padding="0">
-							<Image Source="completedorder" WidthRequest="150" HeightRequest="150"></Image>
-						</Frame>
-					</Grid>
-					<StackLayout Spacing="10" Margin="0">
-						<Frame CornerRadius="0" BackgroundColor="White" BorderColor="Transparent">
-						</Frame>
-					</StackLayout>
+			</StackLayout>-->
 
-					<Grid RowDefinitions="2*,4*,2*" RowSpacing="10" ColumnSpacing="10" ColumnDefinitions="2*,0.05*,2*"
-								Margin="20,0,20,20">
-						<Frame Grid.Row="0" Grid.Column="0">
-							<Image Source="orders" WidthRequest="100" HeightRequest="100"></Image>
-						</Frame>
-						<Frame Grid.Row="0" Grid.Column="2">
-							<Image Source="courier" WidthRequest="100" HeightRequest="100"></Image>
-						</Frame>
-						<Frame Grid.Row="2" Grid.Column="0">
-							<Image Source="returnsorder" WidthRequest="100" HeightRequest="100"></Image>
-						</Frame>
-						<Frame Grid.Row="2" Grid.Column="2">
-							<Image Source="completedorder" WidthRequest="100" HeightRequest="100"></Image>
-						</Frame>
-					</Grid>
-				</StackLayout>
-
+			   <ScrollView
+       Grid.Row="1"
+       Grid.Column="0"
+       Grid.ColumnSpan="2"
+       HorizontalScrollBarVisibility="Never"
+       VerticalScrollBarVisibility="Never"
+       Margin="0,32,-24,0">
+			
 
 			</ScrollView>
 
