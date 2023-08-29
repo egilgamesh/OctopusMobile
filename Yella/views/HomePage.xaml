@@ -4,6 +4,7 @@
 						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 						xmlns:yella="clr-namespace:Yella"
 						xmlns:models="clr-namespace:Yella.Model"
+						xmlns:maui="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False" x:Name="mainPage">
 	<ContentPage.Content>
 		<Grid x:Name="MainContentGrid" Padding="24,52,24,0"
@@ -11,7 +12,7 @@
 					BackgroundColor="{x:StaticResource PageBackgroundColor}"
 					ColumnDefinitions="*,Auto"
 					FlowDirection="RightToLeft"
-					RowDefinitions="Auto,*">
+					RowDefinitions="Auto,Auto,Auto,*">
 
 			<!-- Header Text -->
 			<VerticalStackLayout
@@ -68,12 +69,12 @@
 			<!--</StackLayout>-->
 
 
-			<!--<StackLayout Grid.Row="1" Padding="20">-->
+			<StackLayout Grid.Row="1" Padding="20">
 				<Frame BackgroundColor="Gray" CornerRadius="5" Padding="10">
 					<Image Source="credit3" WidthRequest="210" HeightRequest="140"></Image>
 
 				</Frame>
-			<!--</StackLayout>-->
+			</StackLayout>
 
 			<!--<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
 				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
@@ -81,7 +82,7 @@
 			</StackLayout>-->
 
 			<ScrollView
-				Grid.Row="1"
+				Grid.Row="2"
 				Grid.Column="0"
 				Grid.ColumnSpan="2"
 				HorizontalScrollBarVisibility="Never"
@@ -141,7 +142,7 @@
 						x:Name="lstPopularView"
 						HeightRequest="120"
 						SelectionMode="Single"
-						
+
 						SelectionChanged="View_SelectionChanged">
 
 						<CollectionView.ItemsLayout>
@@ -153,17 +154,57 @@
 						<CollectionView.ItemTemplate>
 							<DataTemplate
 								x:DataType="models:MostView">
-										<Image
-											Source="{Binding ImageName}"
-											Aspect="AspectFill"
-											HorizontalOptions="Fill" />
+								<Image
+									Source="{Binding ImageName}"
+									Aspect="AspectFill"
+									HorizontalOptions="Fill" />
 
 							</DataTemplate>
 						</CollectionView.ItemTemplate>
-
 					</CollectionView>
+					<!-- More Section -->
+					<Label
+						Style="{StaticResource PageSubHeaderStyle}"
+						Margin="0,12,0,0">
+						<Label.FormattedText>
+							<FormattedString>
+								<Span Text="البيانات الأحصائية   " />
+								<Span Text="←" FontSize="20" />
+							</FormattedString>
+						</Label.FormattedText>
+					</Label>
+					<CollectionView
+						x:Name="lstStatisticsView"
+						HeightRequest="120"
+						SelectionMode="Single"
+
+						SelectionChanged="View_SelectionChanged">
+
+						<CollectionView.ItemsLayout>
+							<LinearItemsLayout
+								Orientation="Horizontal"
+								ItemSpacing="16" />
+						</CollectionView.ItemsLayout>
+
+						<CollectionView.ItemTemplate>
+							<DataTemplate
+								x:DataType="models:MostView">
+								<StackLayout Padding="16" HorizontalOptions="CenterAndExpand">
+									<maui:PieChart x:Name="arcts"
+										InitialRotation="-225"
+										MaxAngle="270"
+										MinValue="0"
+										MaxValue="100">
+									</maui:PieChart>
+									<Image Source="{Binding ImageName}" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
+									<Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"
+												HorizontalOptions="CenterAndExpand" />
+								</StackLayout>
 
 
+							</DataTemplate>
+						</CollectionView.ItemTemplate>
+					</CollectionView>
 				</VerticalStackLayout>
 			</ScrollView>
 

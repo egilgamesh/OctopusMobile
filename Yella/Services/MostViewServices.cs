@@ -7,9 +7,9 @@ public static class MostViewServices
 	public static IEnumerable<MostView> GetPopularView() => PopularViews;
 	private static readonly List<MostView> PopularViews = new()
 	{
-		new MostView { ImageName = "orders" },
-		new MostView { ImageName = "courier.png" },
-		new MostView { ImageName = "returnsorder.png" },
-		new MostView { ImageName = "completedorder.png" }
+		new MostView { ImageName = "orders", Title = "الطلبات المسجلة"},
+		new MostView { ImageName = "courier.png", Title = "مندوب التوصيل"},
+		new MostView { ImageName = "returnsorder.png", Title = "الراجع"},
+		new MostView { ImageName = "completedorder.png", Title = "الطلبات المكتملة"}
 	};
 }
