@@ -74,7 +74,7 @@
 	</Setter>
 </Style>-->
 
-		<!--<Style TargetType="NavigationPage">
+	<!--<Style TargetType="NavigationPage">
         <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}" />
         <Setter Property="BarTextColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource White}}" />
         <Setter Property="IconColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource White}}" />
@@ -444,7 +444,6 @@
 	</Style>
 
 
-
 	<Style TargetType="NavigationPage" ApplyToDerivedTypes="True">
 		<Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
 	</Style>
@@ -554,29 +553,25 @@
 
 	<Style TargetType="Label" x:Key="PageHeaderStyle" BasedOn="{StaticResource BaseBoldLabeltyle}">
 		<Setter Property="FontSize" Value="32" />
-<<<<<<< Updated upstream
 		<Setter Property="TextColor" Value="{x:StaticResource MainPageBackgroundColor}" />
-=======
 		<Setter Property="TextColor" Value="{StaticResource TitleHeaderColor}" />
->>>>>>> Stashed changes
 	</Style>
 
 	<Style TargetType="Label" x:Key="PageHeaderSubtitleStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
 		<Setter Property="FontSize" Value="14" />
-<<<<<<< Updated upstream
+
 		<Setter Property="TextColor" Value="{x:StaticResource MainPageBackgroundColor}" />
-=======
+
 		<Setter Property="TextColor" Value="{StaticResource TitleHeaderColor}" />
->>>>>>> Stashed changes
+
 	</Style>
 
 	<Style TargetType="Label" x:Key="PageSubHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
 		<Setter Property="FontSize" Value="20" />
-<<<<<<< Updated upstream
+
 		<Setter Property="TextColor" Value="{StaticResource MainPageBackgroundColor}" />
-=======
+
 		<Setter Property="TextColor" Value="{StaticResource TitleHeaderColor}" />
->>>>>>> Stashed changes
 	</Style>
 
 	<Style TargetType="Label" x:Key="FeaturedPlanetHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">

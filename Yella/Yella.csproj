@@ -91,6 +91,8 @@
 	  <None Remove="Resources\Images\bars-solid.svg" />
 	  <None Remove="Resources\Images\check-to-slot-solid.svg" />
 	  <None Remove="Resources\Images\circle-plus-solid.svg" />
+	  <None Remove="Resources\Images\delieverman.png" />
+	  <None Remove="Resources\Images\deliveredorders.png" />
 	  <None Remove="Resources\Images\ellipsis-solid.svg" />
 	  <None Remove="Resources\Images\ellipsis-vertical-solid.svg" />
 	  <None Remove="Resources\Images\file-invoice-dollar-solid.svg" />
@@ -99,8 +101,11 @@
 	  <None Remove="Resources\Images\map-location-dot-solid.svg" />
 	  <None Remove="Resources\Images\money-dollar-solid.svg" />
 	  <None Remove="Resources\Images\octopus.png" />
+	  <None Remove="Resources\Images\returnsorderstore.png" />
 	  <None Remove="Resources\Images\sack-dollar-solid.svg" />
 	  <None Remove="Resources\Images\sheet-solid.svg" />
+	  <None Remove="Resources\Images\testord.png" />
+	  <None Remove="Resources\Images\testorder.png" />
 	</ItemGroup>
 
 	<ItemGroup>

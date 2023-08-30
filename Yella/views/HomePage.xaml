@@ -69,7 +69,7 @@
 
 			<Border
 				VerticalOptions="Center"
-								Stroke="White"
+				Stroke="White"
 				HorizontalOptions="End">
 
 				<Border.GestureRecognizers>
@@ -88,10 +88,9 @@
 			<!--</StackLayout>-->
 
 
-			<StackLayout Grid.Row="1" Padding="20">
-				<Frame BackgroundColor="Gray" CornerRadius="5" Padding="10">
-					<Image Source="credit3" WidthRequest="210" HeightRequest="140"></Image>
-
+			<StackLayout Grid.Row="1" Grid.ColumnSpan="2" Padding="20">
+				<Frame BackgroundColor="{x:StaticResource SecondaryPageBackgroundColor}" CornerRadius="5"  HasShadow="True" HeightRequest="170">
+					<Image Source="credit3"  Aspect="AspectFill" HeightRequest="170"></Image>
 				</Frame>
 			</StackLayout>
 
@@ -176,7 +175,8 @@
 								<Image
 									Source="{Binding ImageName}"
 									Aspect="AspectFill"
-									HorizontalOptions="Fill" />
+									HorizontalOptions="Fill">
+								</Image>
 
 							</DataTemplate>
 						</CollectionView.ItemTemplate>
