@@ -43,8 +43,8 @@
 	<Color x:Key="Blue200Accent">#72ACF1</Color>
 	<Color x:Key="Blue300Accent">#A7CBF6</Color>
 	<!-- Colors -->
-	<Color x:Key="PageBackgroundColor">#191932</Color>
-	<Color x:Key="MainPageBackgroundColor">White</Color>
+	<Color x:Key="MainPageBackgroundColor">#191932</Color>
+	<Color x:Key="PageBackgroundColor">White</Color>
 	<Color x:Key="AccentBackgroundColor">#1A3FBB</Color>
 	<Color x:Key="BottomBar">#191932</Color>
 	<Color x:Key="SecondColor">#F7B548</Color>

@@ -190,7 +190,6 @@
 							<DataTemplate
 								x:DataType="models:MostView">
 								<StackLayout Padding="16" HorizontalOptions="CenterAndExpand">
-
 									<Image Source="{Binding ImageName}" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
 									<Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"
 												HorizontalOptions="CenterAndExpand" />

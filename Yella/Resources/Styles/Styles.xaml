@@ -554,17 +554,17 @@
 
 	<Style TargetType="Label" x:Key="PageHeaderStyle" BasedOn="{StaticResource BaseBoldLabeltyle}">
 		<Setter Property="FontSize" Value="32" />
-		<Setter Property="TextColor" Value="White" />
+		<Setter Property="TextColor" Value="{x:StaticResource MainPageBackgroundColor}" />
 	</Style>
 
 	<Style TargetType="Label" x:Key="PageHeaderSubtitleStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
 		<Setter Property="FontSize" Value="14" />
-		<Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+		<Setter Property="TextColor" Value="{x:StaticResource MainPageBackgroundColor}" />
 	</Style>
 
 	<Style TargetType="Label" x:Key="PageSubHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
 		<Setter Property="FontSize" Value="20" />
-		<Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+		<Setter Property="TextColor" Value="{StaticResource MainPageBackgroundColor}" />
 	</Style>
 
 	<Style TargetType="Label" x:Key="FeaturedPlanetHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
