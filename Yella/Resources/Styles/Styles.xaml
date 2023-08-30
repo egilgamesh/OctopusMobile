@@ -434,11 +434,11 @@
 						Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray200}}" />
 		<Setter Property="Shell.NavBarHasShadow" Value="False" />
 		<Setter Property="Shell.TabBarBackgroundColor"
-						Value="{AppThemeBinding Light={StaticResource BottomBar}, Dark={StaticResource Black}}" />
+						Value="{AppThemeBinding Light={StaticResource PrimaryPageBackgroundColor}, Dark={StaticResource Black}}" />
 		<Setter Property="Shell.TabBarForegroundColor"
-						Value="{AppThemeBinding Light={StaticResource SecondColor}, Dark={StaticResource White}}" />
+						Value="{AppThemeBinding Light={StaticResource SecondaryPageBackgroundColor}, Dark={StaticResource White}}" />
 		<Setter Property="Shell.TabBarTitleColor"
-						Value="{AppThemeBinding Light={StaticResource SecondColor}, Dark={StaticResource White}}" />
+						Value="{AppThemeBinding Light={StaticResource SecondaryPageBackgroundColor}, Dark={StaticResource White}}" />
 		<Setter Property="Shell.TabBarUnselectedColor"
 						Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray200}}" />
 	</Style>
@@ -554,17 +554,29 @@
 
 	<Style TargetType="Label" x:Key="PageHeaderStyle" BasedOn="{StaticResource BaseBoldLabeltyle}">
 		<Setter Property="FontSize" Value="32" />
+<<<<<<< Updated upstream
 		<Setter Property="TextColor" Value="{x:StaticResource MainPageBackgroundColor}" />
+=======
+		<Setter Property="TextColor" Value="{StaticResource TitleHeaderColor}" />
+>>>>>>> Stashed changes
 	</Style>
 
 	<Style TargetType="Label" x:Key="PageHeaderSubtitleStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
 		<Setter Property="FontSize" Value="14" />
+<<<<<<< Updated upstream
 		<Setter Property="TextColor" Value="{x:StaticResource MainPageBackgroundColor}" />
+=======
+		<Setter Property="TextColor" Value="{StaticResource TitleHeaderColor}" />
+>>>>>>> Stashed changes
 	</Style>
 
 	<Style TargetType="Label" x:Key="PageSubHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
 		<Setter Property="FontSize" Value="20" />
+<<<<<<< Updated upstream
 		<Setter Property="TextColor" Value="{StaticResource MainPageBackgroundColor}" />
+=======
+		<Setter Property="TextColor" Value="{StaticResource TitleHeaderColor}" />
+>>>>>>> Stashed changes
 	</Style>
 
 	<Style TargetType="Label" x:Key="FeaturedPlanetHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">

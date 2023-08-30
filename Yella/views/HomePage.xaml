@@ -9,7 +9,7 @@
 	<ContentPage.Content>
 		<Grid x:Name="MainContentGrid" Padding="24,52,24,0"
 					IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-					BackgroundColor="{x:StaticResource PageBackgroundColor}"
+					BackgroundColor="{x:StaticResource WhitePageBackgroundColor}"
 					ColumnDefinitions="*,Auto"
 					FlowDirection="RightToLeft"
 					RowDefinitions="Auto,Auto,Auto,*">
@@ -65,7 +65,26 @@
 
 			</Border>
 
+			<!-- Notification Pic -->
 
+			<Border
+				VerticalOptions="Center"
+								Stroke="White"
+				HorizontalOptions="End">
+
+				<Border.GestureRecognizers>
+					<TapGestureRecognizer Tapped="ProfilePic_Clicked" />
+				</Border.GestureRecognizers>
+
+				<Image
+					VerticalOptions="Center"
+					HorizontalOptions="Center"
+					WidthRequest="40"
+					HeightRequest="40"
+					Source="notification.png">
+				</Image>
+
+			</Border>
 			<!--</StackLayout>-->
 
 

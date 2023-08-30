@@ -54,4 +54,8 @@
 	<Color x:Key="LightBorderColor">#d5d5d5</Color>
 	<Color x:Key="LightTextColor">#d5d5d5</Color>
 	<Color x:Key="DarkTextColor">#252525</Color>
+	<Color x:Key="PrimaryPageBackgroundColor">#0A2342</Color>
+	<Color x:Key="WhitePageBackgroundColor">White</Color>
+	<Color x:Key="SecondaryPageBackgroundColor">#50c878</Color>
+	<Color x:Key="TitleHeaderColor">#0A2342</Color>
 </ResourceDictionary>
