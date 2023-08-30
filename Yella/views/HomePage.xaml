@@ -117,7 +117,7 @@
 								VerticalOptions="Center" />
 
 							<Label
-								Text="Search"
+								Text="بحث"
 								Grid.Column="1"
 								VerticalOptions="Center"
 								VerticalTextAlignment="Center"
@@ -190,12 +190,7 @@
 							<DataTemplate
 								x:DataType="models:MostView">
 								<StackLayout Padding="16" HorizontalOptions="CenterAndExpand">
-									<maui:PieChart x:Name="arcts"
-										InitialRotation="-225"
-										MaxAngle="270"
-										MinValue="0"
-										MaxValue="100">
-									</maui:PieChart>
+
 									<Image Source="{Binding ImageName}" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
 									<Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"
 												HorizontalOptions="CenterAndExpand" />

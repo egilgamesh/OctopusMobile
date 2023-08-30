@@ -8,34 +8,37 @@
 	Shell.FlyoutBehavior="Disabled">
 
 	<ShellContent
-		Title=""
+		Title="Introduction"
 		ContentTemplate="{DataTemplate local:IntroPage}"
 		Route="IntroPage" />
 	<TabBar Route="DashboardTab">
-		<Tab Title="Home" Icon="housesolid">
+
+
+		<Tab Title="اعدادات" Icon="ellipsissolid">
 			<ShellContent
-				ContentTemplate="{DataTemplate local:HomePage}"
-				Route="HomePage" />
+				ContentTemplate="{DataTemplate local:SettingsPage}"
+				Route="SettingsPage" />
 		</Tab>
-		<Tab Title="Balance" Icon="fileinvoicedollar" >
-			<ShellContent
-				ContentTemplate="{DataTemplate local:BalancePage}"
-				Route="BalancePage" />
-		</Tab>
-		<Tab Title="New" Icon="circlesolid">
-			<ShellContent
-				ContentTemplate="{DataTemplate local:NewOrderPage}"
-				Route="NewOrderPage" />
-		</Tab>
-		<Tab Title="Track" Icon="check_slot_solid">
+		<Tab Title="تتبع" Icon="check_slot_solid">
 			<ShellContent
 				ContentTemplate="{DataTemplate local:TrackPage}"
 				Route="TrackPage" />
 		</Tab>
-		<Tab Title="Setting" Icon="ellipsissolid">
+
+		<Tab Title="جديد" Icon="circlesolid">
 			<ShellContent
-				ContentTemplate="{DataTemplate local:SettingsPage}"
-				Route="SettingsPage" />
+				ContentTemplate="{DataTemplate local:NewOrderPage}"
+				Route="NewOrderPage" />
+		</Tab>
+		<Tab Title="الرصيد" Icon="fileinvoicedollar">
+			<ShellContent
+				ContentTemplate="{DataTemplate local:BalancePage}"
+				Route="BalancePage" />
+		</Tab>
+		<Tab Title="الرئيسية" Icon="housesolid">
+			<ShellContent
+				ContentTemplate="{DataTemplate local:HomePage}"
+				Route="HomePage" />
 		</Tab>
 	</TabBar>
 </Shell>
