@@ -8,7 +8,7 @@ public static class MostViewServices
 	private static readonly List<MostView> PopularViews = new()
 	{
 		new MostView { ImageName = "testord", Title = "الطلبات المسجلة"},
-		new MostView { ImageName = "delieverman", Title = "مندوب التوصيل"},
+		new MostView { ImageName = "delievermantwo", Title = "مندوب التوصيل"},
 		new MostView { ImageName = "returnsorderstore.png", Title = "الراجع"},
 		new MostView { ImageName = "deliveredorders.png", Title = "الطلبات المكتملة"}
 	};

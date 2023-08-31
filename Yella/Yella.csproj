@@ -6,6 +6,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-ios;net7.0-maccatalyst;net7.0-android33.0</TargetFrameworks>
+		<SupportedOSPlatformVersion>12.0</SupportedOSPlatformVersion>
 		<!--<TargetFrameworks> net7.0-android;</TargetFrameworks>-->
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
@@ -92,6 +93,7 @@
 	  <None Remove="Resources\Images\check-to-slot-solid.svg" />
 	  <None Remove="Resources\Images\circle-plus-solid.svg" />
 	  <None Remove="Resources\Images\delieverman.png" />
+	  <None Remove="Resources\Images\delievermantwo.png" />
 	  <None Remove="Resources\Images\deliveredorders.png" />
 	  <None Remove="Resources\Images\ellipsis-solid.svg" />
 	  <None Remove="Resources\Images\ellipsis-vertical-solid.svg" />
