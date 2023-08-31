@@ -2,12 +2,14 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-						x:Class="Yella.views.BalancePage"
-						Title="DashboardView" Shell.NavBarIsVisible="False">
-	<Grid BackgroundColor="White" RowDefinitions="0.5*, 0.1*, 0.45*,0.05*,0.05*,0.3*">
-		<Label FontSize="16" HorizontalOptions="Center" Text="Balance" TextColor="{x:StaticResource Primary}"
-					VerticalOptions="Center
-				 "/>
+						x:Class="Yella.views.BalancePage">
+	<ContentPage.Content>
+		<Grid BackgroundColor="White">
+			<Label FontSize="16" HorizontalOptions="Center" Text="Balance" TextColor="{x:StaticResource Primary}"
+						VerticalOptions="Center
+				 " />
 
-	</Grid>
+		</Grid>
+	</ContentPage.Content>
+
 </ContentPage>

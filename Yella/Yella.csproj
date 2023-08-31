@@ -72,13 +72,20 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android33.0|AnyCPU'">
-	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <AndroidKeyStore>True</AndroidKeyStore>
 	  <Debugger>Xamarin</Debugger>
+	  <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+	  <AndroidSigningStorePass>yella2388</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>yella</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>yella2388</AndroidSigningKeyPass>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android33.0|AnyCPU'">
-	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <AndroidKeyStore>True</AndroidKeyStore>
 	  <Debugger>Xamarin</Debugger>
+	  <AndroidSigningStorePass>yella2388</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>yella</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>yella2388</AndroidSigningKeyPass>
 	</PropertyGroup>
 
 	<ItemGroup>
