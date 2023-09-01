@@ -4,10 +4,9 @@
 						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 						x:Class="Yella.views.BalancePage">
 	<ContentPage.Content>
-		<Grid BackgroundColor="White">
+		<Grid>
 			<Label FontSize="16" HorizontalOptions="Center" Text="Balance" TextColor="{x:StaticResource Primary}"
-						VerticalOptions="Center
-				 " />
+						VerticalOptions="Center" />
 
 		</Grid>
 	</ContentPage.Content>
