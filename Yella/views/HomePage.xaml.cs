@@ -38,7 +38,6 @@ public partial class HomePage : ContentPage
 	{
 		base.OnAppearing();
 		LstPopularView!.ItemsSource = MostViewServices.GetPopularView();
-		lstStatisticsView!.ItemsSource = MostViewServices.GetPopularView();
 	}
 
 	public ObservableCollection<ISeries> Series { get; set; }

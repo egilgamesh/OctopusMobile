@@ -114,43 +114,8 @@
 					VerticalScrollBarVisibility="Never"
 					Margin="-4,3,-4,0">
 
-					<VerticalStackLayout
+					<StackLayout
 						Spacing="12">
-						<!-- Search Box -->
-						<!--<Border
-						Padding="12,4"
-						BackgroundColor="#33CCCCCC"
-						Stroke="{x:StaticResource BorderColor}"
-						HorizontalOptions="Fill"
-						Margin="0,0,24,0"
-						HeightRequest="48">
-						<Border.StrokeShape>
-							<RoundRectangle CornerRadius="6" />
-						</Border.StrokeShape>
-
-						<Grid
-							HorizontalOptions="Fill"
-							VerticalOptions="Center"
-							ColumnDefinitions="Auto,*"
-							ColumnSpacing="16">
-
-							<Image
-								WidthRequest="18"
-								HeightRequest="18"
-								Source="imgsearch.png"
-								Grid.Column="0"
-								VerticalOptions="Center" />
-
-							<Label
-								Text="بحث"
-								Grid.Column="1"
-								VerticalOptions="Center"
-								VerticalTextAlignment="Center"
-								Style="{StaticResource MenuLabelStyle}" />
-
-						</Grid>
-
-					</Border>-->
 						<!-- Most Popular Section -->
 						<Label
 							Style="{StaticResource PageSubHeaderStyle}"
@@ -166,7 +131,7 @@
 						<CollectionView
 							x:Name="LstPopularView"
 							HorizontalOptions="Center"
-							HeightRequest="240"
+							HeightRequest="270"
 							SelectionMode="Single"
 							EmptyView="No Data Available"
 							SelectionChanged="View_SelectionChanged">
@@ -193,6 +158,8 @@
 								</DataTemplate>
 							</CollectionView.ItemTemplate>
 						</CollectionView>
+
+
 						<!-- More Section -->
 						<Label
 							Style="{StaticResource PageSubHeaderStyle}"
@@ -204,33 +171,9 @@
 								</FormattedString>
 							</Label.FormattedText>
 						</Label>
-						<CollectionView
-							x:Name="lstStatisticsView"
-							HeightRequest="120"
-							SelectionMode="Single"
 
-							SelectionChanged="View_SelectionChanged">
-
-							<CollectionView.ItemsLayout>
-								<LinearItemsLayout
-									Orientation="Horizontal"
-									ItemSpacing="16" />
-							</CollectionView.ItemsLayout>
-
-							<CollectionView.ItemTemplate>
-								<DataTemplate
-									x:DataType="models:MostView">
-									<StackLayout Padding="16" HorizontalOptions="CenterAndExpand">
-										<Image Source="{Binding ImageName}" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
-										<Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"
-													HorizontalOptions="CenterAndExpand" />
-									</StackLayout>
-
-
-								</DataTemplate>
-							</CollectionView.ItemTemplate>
-						</CollectionView>
-					</VerticalStackLayout>
+						<Image Source="octopus"></Image>
+					</StackLayout>
 				</ScrollView>
 
 			</Grid>
