@@ -7,110 +7,117 @@
 						xmlns:maui="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False" x:Name="mainPage">
 	<ContentPage.Content>
-		<Grid x:Name="MainContentGrid" Padding="24,52,24,0"
-					IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-					BackgroundColor="{x:StaticResource WhitePageBackgroundColor}"
-					ColumnDefinitions="*,Auto"
-					FlowDirection="RightToLeft"
-					RowDefinitions="Auto,Auto,Auto,*">
+		<Grid x:Name="MainContainer" RowDefinitions="80,*">
+			<Frame HasShadow="True" Grid.Row="0" CornerRadius="0">
+				<Grid ColumnDefinitions="*,Auto"
+							FlowDirection="RightToLeft"
+							RowDefinitions="Auto,Auto,Auto,*">
+					<!-- Header Text -->
+					<VerticalStackLayout
+						Spacing="4"
+						Grid.Row="0"
+						Grid.Column="0"
+						VerticalOptions="Center">
 
-			<!-- Header Text -->
-			<VerticalStackLayout
-				Spacing="4"
-				Grid.Row="0"
-				Grid.Column="0"
-				VerticalOptions="Center">
+						<!--<Label
+							Style="{StaticResource PageHeaderStyle}"
+							Text="Yella" />
 
-				<Label
-					Style="{StaticResource PageHeaderStyle}"
-					Text="Yella" />
+						<Label
+							Style="{StaticResource PageHeaderSubtitleStyle}"
+							Text="التوصيل ويانا اسهل" />-->
+						<Image Source="yella" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start"></Image>
+					</VerticalStackLayout>
 
-				<Label
-					Style="{StaticResource PageHeaderSubtitleStyle}"
-					Text="التوصيل ويانا اسهل" />
-			</VerticalStackLayout>
+					<!-- Profile Pic -->
+					<Border
+						WidthRequest="40"
+						HeightRequest="40"
+						VerticalOptions="Center"
+						HorizontalOptions="End"
+						Stroke="{x:StaticResource LightBorderColor}"
+						StrokeThickness="3"
+						Grid.Row="0"
+						Grid.Column="1">
 
-			<!-- Profile Pic -->
-			<Border
-				WidthRequest="56"
-				HeightRequest="56"
-				VerticalOptions="Center"
-				HorizontalOptions="End"
-				Stroke="{x:StaticResource LightBorderColor}"
-				StrokeThickness="6"
-				Grid.Row="0"
-				Grid.Column="1">
+						<Border.StrokeShape>
+							<RoundRectangle CornerRadius="28" />
+						</Border.StrokeShape>
 
-				<Border.StrokeShape>
-					<RoundRectangle CornerRadius="28" />
-				</Border.StrokeShape>
+						<Border.GestureRecognizers>
+							<TapGestureRecognizer Tapped="ProfilePic_Clicked" />
+						</Border.GestureRecognizers>
 
-				<Border.GestureRecognizers>
-					<TapGestureRecognizer Tapped="ProfilePic_Clicked" />
-				</Border.GestureRecognizers>
+						<Image
+							VerticalOptions="Center"
+							HorizontalOptions="Center"
+							WidthRequest="40"
+							HeightRequest="40"
+							Source="octopus.png">
+							<Image.Clip>
+								<EllipseGeometry
+									Center="25,25"
+									RadiusX="25"
+									RadiusY="25" />
+							</Image.Clip>
+						</Image>
 
-				<Image
-					VerticalOptions="Center"
-					HorizontalOptions="Center"
-					WidthRequest="50"
-					HeightRequest="50"
-					Source="octopus.png">
-					<Image.Clip>
-						<EllipseGeometry
-							Center="25,25"
-							RadiusX="25"
-							RadiusY="25" />
-					</Image.Clip>
-				</Image>
+					</Border>
 
-			</Border>
+					<!-- Notification Pic -->
 
-			<!-- Notification Pic -->
+					<Border
+						VerticalOptions="Center"
+						Stroke="White"
+						HorizontalOptions="End">
 
-			<Border
-				VerticalOptions="Center"
-				Stroke="White"
-				HorizontalOptions="End">
+						<Border.GestureRecognizers>
+							<TapGestureRecognizer Tapped="ProfilePic_Clicked" />
+						</Border.GestureRecognizers>
 
-				<Border.GestureRecognizers>
-					<TapGestureRecognizer Tapped="ProfilePic_Clicked" />
-				</Border.GestureRecognizers>
+						<Image
+							VerticalOptions="Center"
+							HorizontalOptions="Center"
+							WidthRequest="30"
+							HeightRequest="30"
+							Source="notification.png">
+						</Image>
 
-				<Image
-					VerticalOptions="Center"
-					HorizontalOptions="Center"
-					WidthRequest="40"
-					HeightRequest="40"
-					Source="notification.png">
-				</Image>
+					</Border>
+					<!--</StackLayout>-->
+				</Grid>
+			</Frame>
+			<Grid Grid.Row="1" x:Name="MainContentGrid" Padding="24,5,24,0"
+						IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+						BackgroundColor="{x:StaticResource WhitePageBackgroundColor}"
+						ColumnDefinitions="*,Auto"
+						FlowDirection="RightToLeft"
+						RowDefinitions="Auto,Auto,Auto,*">
 
-			</Border>
-			<!--</StackLayout>-->
+				<StackLayout Grid.Row="0" Grid.ColumnSpan="2" Padding="20">
+					<Frame BackgroundColor="{x:StaticResource SecondaryPageBackgroundColor}" CornerRadius="5" HasShadow="True"
+								HeightRequest="170">
+						<Image Source="credit3" Aspect="AspectFill" HeightRequest="170"></Image>
+					</Frame>
+				</StackLayout>
 
-
-			<StackLayout Grid.Row="1" Grid.ColumnSpan="2" Padding="20">
-				<Frame BackgroundColor="{x:StaticResource SecondaryPageBackgroundColor}" CornerRadius="5"  HasShadow="True" HeightRequest="170">
-					<Image Source="credit3"  Aspect="AspectFill" HeightRequest="170"></Image>
-				</Frame>
-			</StackLayout>
-
-			<!--<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
+				<!--<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
 				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
 				<Label Text="الطلبات" TextColor="{x:StaticResource Gray500}"></Label>
 			</StackLayout>-->
 
-			<ScrollView
-				Grid.Row="2"
-				Grid.Column="0"
-				Grid.ColumnSpan="2"
-				HorizontalScrollBarVisibility="Never"
-				VerticalScrollBarVisibility="Never"
-				Margin="0,32,-24,0">
+				<ScrollView
+					Grid.Row="1"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					HorizontalScrollBarVisibility="Never"
+					VerticalScrollBarVisibility="Never"
+					Margin="-4,3,-4,0">
 
-				<VerticalStackLayout
-					Spacing="12">
-					<!-- Search Box -->
-					<Border
+					<VerticalStackLayout
+						Spacing="12">
+						<!-- Search Box -->
+						<!--<Border
 						Padding="12,4"
 						BackgroundColor="#33CCCCCC"
 						Stroke="{x:StaticResource BorderColor}"
@@ -143,84 +150,91 @@
 
 						</Grid>
 
-					</Border>
-					<!-- Most Popular Section -->
-					<Label
-						Style="{StaticResource PageSubHeaderStyle}"
-						Margin="0,12,0,0">
-						<Label.FormattedText>
-							<FormattedString>
-								<Span Text="الاكثر رواجآ   " />
-								<Span Text="←" FontSize="20" />
-							</FormattedString>
-						</Label.FormattedText>
-					</Label>
+					</Border>-->
+						<!-- Most Popular Section -->
+						<Label
+							Style="{StaticResource PageSubHeaderStyle}"
+							Margin="0,12,0,0">
+							<Label.FormattedText>
+								<FormattedString>
+									<Span Text="الاكثر رواجآ   " />
+									<Span Text="←" FontSize="20" />
+								</FormattedString>
+							</Label.FormattedText>
+						</Label>
 
-					<CollectionView
-						x:Name="lstPopularView"
-						HeightRequest="120"
-						SelectionMode="Single"
+						<CollectionView
+							x:Name="LstPopularView"
+							HorizontalOptions="Center"
+							HeightRequest="240"
+							SelectionMode="Single"
+							EmptyView="No Data Available"
+							SelectionChanged="View_SelectionChanged">
 
-						SelectionChanged="View_SelectionChanged">
+							<CollectionView.ItemsLayout>
+								<GridItemsLayout
+									Orientation="Vertical"
+									Span="2"
+									HorizontalItemSpacing="10"
+									VerticalItemSpacing="10" />
+							</CollectionView.ItemsLayout>
 
-						<CollectionView.ItemsLayout>
-							<LinearItemsLayout
-								Orientation="Horizontal"
-								ItemSpacing="16" />
-						</CollectionView.ItemsLayout>
+							<CollectionView.ItemTemplate>
+								<DataTemplate
+									x:DataType="models:MostView">
+									<Image
+										Source="{Binding ImageName}"
+										Aspect="AspectFill"
+										HorizontalOptions="Fill">
+										<Image.GestureRecognizers>
+											<TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"></TapGestureRecognizer>
+										</Image.GestureRecognizers>
+									</Image>
+								</DataTemplate>
+							</CollectionView.ItemTemplate>
+						</CollectionView>
+						<!-- More Section -->
+						<Label
+							Style="{StaticResource PageSubHeaderStyle}"
+							Margin="0,12,0,0">
+							<Label.FormattedText>
+								<FormattedString>
+									<Span Text="البيانات الأحصائية   " />
+									<Span Text="←" FontSize="20" />
+								</FormattedString>
+							</Label.FormattedText>
+						</Label>
+						<CollectionView
+							x:Name="lstStatisticsView"
+							HeightRequest="120"
+							SelectionMode="Single"
 
-						<CollectionView.ItemTemplate>
-							<DataTemplate
-								x:DataType="models:MostView">
-								<Image
-									Source="{Binding ImageName}"
-									Aspect="AspectFill"
-									HorizontalOptions="Fill">
-								</Image>
+							SelectionChanged="View_SelectionChanged">
 
-							</DataTemplate>
-						</CollectionView.ItemTemplate>
-					</CollectionView>
-					<!-- More Section -->
-					<Label
-						Style="{StaticResource PageSubHeaderStyle}"
-						Margin="0,12,0,0">
-						<Label.FormattedText>
-							<FormattedString>
-								<Span Text="البيانات الأحصائية   " />
-								<Span Text="←" FontSize="20" />
-							</FormattedString>
-						</Label.FormattedText>
-					</Label>
-					<CollectionView
-						x:Name="lstStatisticsView"
-						HeightRequest="120"
-						SelectionMode="Single"
+							<CollectionView.ItemsLayout>
+								<LinearItemsLayout
+									Orientation="Horizontal"
+									ItemSpacing="16" />
+							</CollectionView.ItemsLayout>
 
-						SelectionChanged="View_SelectionChanged">
-
-						<CollectionView.ItemsLayout>
-							<LinearItemsLayout
-								Orientation="Horizontal"
-								ItemSpacing="16" />
-						</CollectionView.ItemsLayout>
-
-						<CollectionView.ItemTemplate>
-							<DataTemplate
-								x:DataType="models:MostView">
-								<StackLayout Padding="16" HorizontalOptions="CenterAndExpand">
-									<Image Source="{Binding ImageName}" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
-									<Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"
-												HorizontalOptions="CenterAndExpand" />
-								</StackLayout>
+							<CollectionView.ItemTemplate>
+								<DataTemplate
+									x:DataType="models:MostView">
+									<StackLayout Padding="16" HorizontalOptions="CenterAndExpand">
+										<Image Source="{Binding ImageName}" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
+										<Label Text="{Binding Title}" FontSize="14" TextColor="White" VerticalOptions="Center"
+													HorizontalOptions="CenterAndExpand" />
+									</StackLayout>
 
 
-							</DataTemplate>
-						</CollectionView.ItemTemplate>
-					</CollectionView>
-				</VerticalStackLayout>
-			</ScrollView>
+								</DataTemplate>
+							</CollectionView.ItemTemplate>
+						</CollectionView>
+					</VerticalStackLayout>
+				</ScrollView>
 
+			</Grid>
 		</Grid>
+
 	</ContentPage.Content>
 </ContentPage>

@@ -37,7 +37,7 @@ public partial class HomePage : ContentPage
 	protected override void OnAppearing()
 	{
 		base.OnAppearing();
-		lstPopularView!.ItemsSource = MostViewServices.GetPopularView();
+		LstPopularView!.ItemsSource = MostViewServices.GetPopularView();
 		lstStatisticsView!.ItemsSource = MostViewServices.GetPopularView();
 	}
 
@@ -65,5 +65,10 @@ public partial class HomePage : ContentPage
 		_ = MainContentGrid.ScaleTo(1, AnimationDuration);
 		await MainContentGrid.TranslateTo(0, 0, AnimationDuration, Easing.CubicIn).
 			ConfigureAwait(false);
+	}
+
+	private void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e)
+	{
+		DisplayAlert("hee", "he", "he");
 	}
 }
