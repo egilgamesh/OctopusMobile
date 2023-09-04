@@ -108,14 +108,7 @@
 							<Image Source="credit3" Aspect="AspectFill" HeightRequest="170"></Image>
 						</Frame>
 					</StackLayout>
-
-					<!--<StackLayout Grid.Row="2" Margin="25,0,25,0" Orientation="Horizontal" Spacing="230">
-				<Label Text="جميع الطلبات &gt;" TextColor="{x:StaticResource Gray500}"></Label>
-				<Label Text="الطلبات" TextColor="{x:StaticResource Gray500}"></Label>
-			</StackLayout>-->
-					<!--start the scroll-->
-
-
+					
 					<VerticalStackLayout Grid.Row="1"
 						Spacing="12">
 						<!-- Most Popular Section -->
@@ -124,7 +117,7 @@
 							Margin="0,12,0,0">
 							<Label.FormattedText>
 								<FormattedString>
-									<Span Text="الاكثر رواجآ   " />
+									<Span Text="جميع الطلبات   " />
 									<Span Text="←" FontSize="20" />
 								</FormattedString>
 							</Label.FormattedText>
@@ -175,6 +168,7 @@
 						</Label>
 
 						<Image Source="octopus"></Image>
+
 					</VerticalStackLayout>
 
 				</Grid>
