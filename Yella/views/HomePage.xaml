@@ -5,6 +5,7 @@
 						xmlns:yella="clr-namespace:Yella"
 						xmlns:models="clr-namespace:Yella.Model"
 						xmlns:maui="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+						xmlns:controls="clr-namespace:Yella.Controls"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False" x:Name="mainPage">
 	<ContentPage.Content>
 		<Grid x:Name="MainContainer" RowDefinitions="80,*">
@@ -91,10 +92,10 @@
 			<!--Body app-->
 			<ScrollView Grid.Row="1"
 
-				HorizontalScrollBarVisibility="Never"
-				VerticalScrollBarVisibility="Never"
-				Margin="-4,3,-4,0">
-				<Grid  x:Name="MainContentGrid" Padding="24,5,24,0"
+									HorizontalScrollBarVisibility="Never"
+									VerticalScrollBarVisibility="Never"
+									Margin="-4,3,-4,0">
+				<Grid x:Name="MainContentGrid" Padding="24,5,24,0"
 							IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
 							BackgroundColor="{x:StaticResource WhitePageBackgroundColor}"
 							ColumnDefinitions="*,Auto"
@@ -108,9 +109,9 @@
 							<Image Source="credit3" Aspect="AspectFill" HeightRequest="170"></Image>
 						</Frame>
 					</StackLayout>
-					
+
 					<VerticalStackLayout Grid.Row="1"
-						Spacing="12">
+															Spacing="12">
 						<!-- Most Popular Section -->
 						<Label
 							Style="{StaticResource PageSubHeaderStyle}"
@@ -166,8 +167,51 @@
 								</FormattedString>
 							</Label.FormattedText>
 						</Label>
+						<Grid RowDefinitions="auto,auto" ColumnDefinitions="auto,auto,auto" ColumnSpacing="60" RowSpacing="30">
+							<VerticalStackLayout Grid.Row="0" Grid.Column="0">
+								<controls:CircularProgressBar
 
-						<Image Source="octopus"></Image>
+									Progress="40"
+									ProgressColor="Green"
+									ProgressLeftColor="LightSteelBlue"
+									Size="60"
+									TextColor="LightSteelBlue"
+									Thickness="4" />
+								<Label Text="الطلبات المسجلة"></Label>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Row="0" Grid.Column="1">
+								<controls:CircularProgressBar
+									Progress="37"
+									ProgressColor="{x:StaticResource PrimaryPageBackgroundColor}"
+									ProgressLeftColor="LightSteelBlue"
+									Size="60"
+									TextColor="LightSteelBlue"
+									Thickness="4" />
+								<Label Text="مندوب التوصيل"></Label>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Row="0" Grid.Column="2">
+								<controls:CircularProgressBar
+									Progress="70"
+									ProgressColor="Orange"
+									ProgressLeftColor="LightSteelBlue"
+									Size="60"
+									TextColor="LightSteelBlue"
+									Thickness="4" />
+								<Label Text="الطلبات المستلمة"></Label>
+							</VerticalStackLayout>
+							<VerticalStackLayout Grid.Row="1" Grid.Column="0">
+								<controls:CircularProgressBar
+									Progress="90"
+									ProgressColor="Red"
+									ProgressLeftColor="LightSteelBlue"
+									Size="60"
+									TextColor="LightSteelBlue"
+									Thickness="4" />
+								<Label Text="الطلبات المكتملة"></Label>
+							</VerticalStackLayout>
+
+						</Grid>
+
 
 					</VerticalStackLayout>
 
