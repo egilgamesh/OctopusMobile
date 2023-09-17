@@ -6,9 +6,7 @@ using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Extensions;
 using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
-using Yella.Model;
 using Yella.Services;
-using Yella.ViewModel;
 
 namespace Yella.views;
 
@@ -17,8 +15,8 @@ public partial class HomePage : ContentPage
 	public HomePage()
 	{
 		InitializeComponent();
-		Series = new ObservableCollection<ISeries>(GaugeGenerator.BuildSolidGauge(new GaugeItem(30, Builder), new GaugeItem(
-			GaugeItem.Background, series =>
+		Series = new ObservableCollection<ISeries>(GaugeGenerator.BuildSolidGauge(
+			new GaugeItem(30, Builder), new GaugeItem(GaugeItem.Background, series =>
 			{
 				series!.InnerRadius = 75;
 				series.Fill = new SolidColorPaint(new SKColor(100, 181, 246, 90));
@@ -66,8 +64,6 @@ public partial class HomePage : ContentPage
 			ConfigureAwait(false);
 	}
 
-	private void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e)
-	{
+	private void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e) =>
 		DisplayAlert("hee", "he", "he");
-	}
 }
