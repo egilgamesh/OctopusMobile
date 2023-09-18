@@ -5,81 +5,74 @@
 						xmlns:model="clr-namespace:Yella.Model"
 						xmlns:models="clr-namespace:Yella.Model"
 						xmlns:controls="clr-namespace:Yella.Controls"
+						xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
 						x:Class="Yella.views.BalancePage">
+	<ContentPage.Behaviors>
+		<toolkit:StatusBarBehavior StatusBarColor="White" />
+	</ContentPage.Behaviors>
 	<ContentPage.Content>
-		<Grid x:Name="MainContainer" RowDefinitions="80,*">
-			<!--Header tiyle-->
-			<Frame HasShadow="True" Grid.Row="0" CornerRadius="0">
-				<Grid ColumnDefinitions="*,Auto"
-							FlowDirection="RightToLeft"
-							RowDefinitions="Auto,Auto,Auto,*">
-					<!-- Header Text -->
-					<VerticalStackLayout
-						Spacing="4"
-						Grid.Row="0"
-						Grid.Column="0"
-						VerticalOptions="Center">
-						<Image Source="yella" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start"></Image>
-					</VerticalStackLayout>
+		<Grid x:Name="MainContainer" RowDefinitions="40,*">
 
-					<!-- Profile Pic -->
-					<Border
-						WidthRequest="40"
-						HeightRequest="40"
+<StackLayout Orientation="Horizontal" Grid.Row="0" Spacing="200" Padding="0">
+		<!-- Header Text -->
+
+		<Image Source="yella" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start"  />
+
+
+		<StackLayout Orientation="Horizontal" HorizontalOptions="End">
+				<!-- Profile Pic -->
+				<Border
+					WidthRequest="30"
+					HeightRequest="30"
+					VerticalOptions="Center"
+					HorizontalOptions="End"
+					Stroke="{x:StaticResource LightBorderColor}"
+					StrokeThickness="3">
+
+					<Border.StrokeShape>
+						<RoundRectangle CornerRadius="28" />
+					</Border.StrokeShape>
+
+
+
+					<Image
 						VerticalOptions="Center"
-						HorizontalOptions="End"
-						Stroke="{x:StaticResource LightBorderColor}"
-						StrokeThickness="3"
-						Grid.Row="0"
-						Grid.Column="1">
+						HorizontalOptions="Center"
+						WidthRequest="30"
+						HeightRequest="30"
+						Source="octopus.png">
+						<Image.Clip>
+							<EllipseGeometry
+								Center="25,25"
+								RadiusX="25"
+								RadiusY="25" />
+						</Image.Clip>
+					</Image>
 
-						<Border.StrokeShape>
-							<RoundRectangle CornerRadius="28" />
-						</Border.StrokeShape>
+				</Border>
 
-						<Border.GestureRecognizers>
-							<TapGestureRecognizer />
-						</Border.GestureRecognizers>
+				<!-- Notification Pic -->
 
-						<Image
-							VerticalOptions="Center"
-							HorizontalOptions="Center"
-							WidthRequest="40"
-							HeightRequest="40"
-							Source="octopus.png">
-							<Image.Clip>
-								<EllipseGeometry
-									Center="25,25"
-									RadiusX="25"
-									RadiusY="25" />
-							</Image.Clip>
-						</Image>
+				<Border
+					VerticalOptions="Center"
+					Stroke="White"
+					HorizontalOptions="End">
 
-					</Border>
-
-					<!-- Notification Pic -->
-
-					<Border
+					<Image
 						VerticalOptions="Center"
-						Stroke="White"
-						HorizontalOptions="End">
+						HorizontalOptions="Center"
+						WidthRequest="25"
+						HeightRequest="25"
+						Source="notification.png">
+					</Image>
 
-						<Border.GestureRecognizers>
-							<TapGestureRecognizer />
-						</Border.GestureRecognizers>
+				</Border>
+				<!--</StackLayout>-->
 
-						<Image
-							VerticalOptions="Center"
-							HorizontalOptions="Center"
-							WidthRequest="30"
-							HeightRequest="30"
-							Source="notification.png">
-						</Image>
 
-					</Border>
-					<!--</StackLayout>-->
-				</Grid>
-			</Frame>
+		</StackLayout>
+
+</StackLayout>
 			<!--Body app-->
 			<ScrollView Grid.Row="1"
 

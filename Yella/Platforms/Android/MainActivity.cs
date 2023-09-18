@@ -9,13 +9,5 @@ namespace Yella
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation |
 			ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize |
 			ConfigChanges.Density)]
-	public class MainActivity : MauiAppCompatActivity
-	{
-		protected override void OnCreate(Bundle savedInstanceState)
-		{
-			base.OnCreate(savedInstanceState);
-			Platform.Init(this, savedInstanceState);
-			Window!.AddFlags(WindowManagerFlags.Fullscreen);
-		}
-	}
+	public class MainActivity : MauiAppCompatActivity { }
 }

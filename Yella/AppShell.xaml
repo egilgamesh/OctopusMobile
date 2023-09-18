@@ -5,13 +5,14 @@
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:local="clr-namespace:Yella.views"
+	xmlns:yella="using:Yella"
 	Shell.FlyoutBehavior="Disabled">
 
 	<ShellContent
 		Title="Introduction"
 		ContentTemplate="{DataTemplate local:IntroPage}"
 		Route="IntroPage" />
-	<TabBar Route="DashboardTab">
+	<yella:OctopusTabBar Route="DashboardTab">
 
 
 		<Tab Title="اعدادات" Icon="ellipsissolid">
@@ -40,5 +41,5 @@
 				ContentTemplate="{DataTemplate local:HomePage}"
 				Route="HomePage" />
 		</Tab>
-	</TabBar>
+</yella:OctopusTabBar>
 </Shell>

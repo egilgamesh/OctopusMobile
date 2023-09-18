@@ -5,42 +5,28 @@
 						xmlns:yella="clr-namespace:Yella"
 						xmlns:models="clr-namespace:Yella.Model"
 						xmlns:controls="clr-namespace:Yella.Controls"
+						xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
 						x:Class="Yella.views.HomePage" Shell.NavBarIsVisible="False"
 						x:Name="mainPage">
+	<ContentPage.Behaviors>
+		<toolkit:StatusBarBehavior StatusBarColor="White" />
+	</ContentPage.Behaviors>
 	<ContentPage.Content>
-		<Grid x:Name="MainContainer" RowDefinitions="80,*">
+
+		<Grid x:Name="MainContainer" RowDefinitions="40,*">
 			<!--Header tiyle-->
-			<Frame HasShadow="True" Grid.Row="0" CornerRadius="0">
-				<Grid ColumnDefinitions="*,Auto"
-							FlowDirection="RightToLeft"
-							RowDefinitions="Auto,Auto,Auto,*">
-					<!-- Header Text -->
-					<VerticalStackLayout
-						Spacing="4"
-						Grid.Row="0"
-						Grid.Column="0"
-						VerticalOptions="Center">
-
-						<!--<Label
-							Style="{StaticResource PageHeaderStyle}"
-							Text="Yella" />
-
-						<Label
-							Style="{StaticResource PageHeaderSubtitleStyle}"
-							Text="التوصيل ويانا اسهل" />-->
-						<Image Source="yella" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start"></Image>
-					</VerticalStackLayout>
-
+			<StackLayout Orientation="Horizontal" Grid.Row="0" Spacing="200" Padding="0">
+				<!-- Header Text -->
+				<Image Source="yella" WidthRequest="100" HeightRequest="50" HorizontalOptions="Start"  />
+				<StackLayout Orientation="Horizontal" HorizontalOptions="End">
 					<!-- Profile Pic -->
 					<Border
-						WidthRequest="40"
-						HeightRequest="40"
+						WidthRequest="30"
+						HeightRequest="30"
 						VerticalOptions="Center"
 						HorizontalOptions="End"
 						Stroke="{x:StaticResource LightBorderColor}"
-						StrokeThickness="3"
-						Grid.Row="0"
-						Grid.Column="1">
+						StrokeThickness="3">
 
 						<Border.StrokeShape>
 							<RoundRectangle CornerRadius="28" />
@@ -53,8 +39,8 @@
 						<Image
 							VerticalOptions="Center"
 							HorizontalOptions="Center"
-							WidthRequest="40"
-							HeightRequest="40"
+							WidthRequest="30"
+							HeightRequest="30"
 							Source="octopus.png">
 							<Image.Clip>
 								<EllipseGeometry
@@ -80,15 +66,18 @@
 						<Image
 							VerticalOptions="Center"
 							HorizontalOptions="Center"
-							WidthRequest="30"
-							HeightRequest="30"
+							WidthRequest="25"
+							HeightRequest="25"
 							Source="notification.png">
 						</Image>
 
 					</Border>
 					<!--</StackLayout>-->
-				</Grid>
-			</Frame>
+
+
+				</StackLayout>
+
+			</StackLayout>
 			<!--Body app-->
 			<ScrollView Grid.Row="1"
 
