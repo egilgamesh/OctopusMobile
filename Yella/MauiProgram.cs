@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using SimpleToolkit.Core;
+using SimpleToolkit.SimpleShell;
 
 namespace Yella;
 
@@ -14,7 +16,10 @@ public static class MauiProgram
 			fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			fonts.AddFont("Alexandria.ttf", "Alexandria");
 			fonts.AddFont("CairoPlay.ttf", "CairoPlay");
-		});
+		}).UseSimpleToolkit().UseSimpleShell();
+#if ANDROID || IOS
+		builder.DisplayContentBehindBars();
+#endif
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
