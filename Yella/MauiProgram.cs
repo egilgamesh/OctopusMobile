@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+#if ANDROID
+using Platforms.Android;
+#endif
 
 namespace Yella;
 
@@ -14,7 +17,14 @@ public static class MauiProgram
 			fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			fonts.AddFont("Alexandria.ttf", "Alexandria");
 			fonts.AddFont("CairoPlay.ttf", "CairoPlay");
-		}).UseMauiCommunityToolkit();
+		});
+#if ANDROID
+		//handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+		builder.ConfigureMauiHandlers(handlers =>
+		{
+			handlers.AddHandler<Shell, CustomShellHandler>();
+		});
+#endif
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif

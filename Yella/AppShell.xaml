@@ -8,11 +8,36 @@
 	xmlns:yella="using:Yella"
 	Shell.FlyoutBehavior="Disabled">
 
+
+	<Shell.Resources>
+		<DataTemplate x:Name="BottomSheetTemplate" x:Key="BottomSheetTemplate">
+			<ScrollView Padding="32,16">
+				<VerticalStackLayout
+					Spacing="25"
+					Padding="30,0"
+					VerticalOptions="Center">
+
+<Entry Placeholder="رقم التوصيل" Margin="0,10,0,10"  />
+<Entry Placeholder="أسم الزبون" Margin="0,10,0,10" />
+<Entry Placeholder="رقم الزبون الاول" Margin="0,10,0,10" />
+<Entry Placeholder="رقم الزبون الثاني" Margin="0,10,0,10" />
+<Entry  Placeholder="عنوان الزبون" Margin="0,10,0,10" />
+
+<Button x:Name="SubmitButton"  Text="التالي" Clicked="OnNextClicked" BackgroundColor="{x:StaticResource Primary}" />
+				</VerticalStackLayout>
+			</ScrollView>
+		</DataTemplate>
+	</Shell.Resources>
+
 	<ShellContent
 		Title="Introduction"
 		ContentTemplate="{DataTemplate local:IntroPage}"
 		Route="IntroPage" />
-	<yella:OctopusTabBar Route="DashboardTab">
+	<yella:OctopusTabBar Route="DashboardTab"
+											CenterViewText="+"
+											CenterViewVisible="True"
+											CenterViewBackgroundColor="{x:StaticResource SecondaryPageBackgroundColor}"
+											CenterViewCommand="{Binding CenterViewCommand}">
 
 
 		<Tab Title="اعدادات" Icon="ellipsissolid">
@@ -26,11 +51,6 @@
 				Route="TrackPage" />
 		</Tab>
 
-		<Tab Title="جديد" Icon="circlesolid">
-			<ShellContent
-				ContentTemplate="{DataTemplate local:NewOrderPage}"
-				Route="NewOrderPage" />
-		</Tab>
 		<Tab Title="الرصيد" Icon="fileinvoicedollar">
 			<ShellContent
 				ContentTemplate="{DataTemplate local:BalancePage}"
@@ -41,5 +61,5 @@
 				ContentTemplate="{DataTemplate local:HomePage}"
 				Route="HomePage" />
 		</Tab>
-</yella:OctopusTabBar>
+	</yella:OctopusTabBar>
 </Shell>
