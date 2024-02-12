@@ -1,11 +1,28 @@
-﻿namespace Yella.UserControl;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
-public sealed class ProgressStep
+namespace Yella.UserControl;
+
+public sealed class ProgressStep : INotifyPropertyChanged
 {
 	public string Title { get; set; }
 	public DateTime StartingDate { get; set; }
 	public DateTime EndingDate { get; set; }
 	public string Description { get; set; }
-	public string Status { get; set; }
-	public int Value { get; set; }
+	public bool Status
+	{
+		get => status;
+		set
+		{
+			if (value == status)
+				return;
+			status = value;
+			OnPropertyChanged(nameof(status));
+		}
+	}
+	private bool status;
+	public event PropertyChangedEventHandler PropertyChanged;
+
+	private void OnPropertyChanged([CallerMemberName] string propertyName = null) =>
+		PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 }

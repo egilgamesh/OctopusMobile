@@ -8,8 +8,8 @@
 	<ContentView.BindingContext>
 		<userControl:ProgressViewModel />
 	</ContentView.BindingContext>
-	<VerticalStackLayout>
-		<ListView ItemsSource="{Binding Steps}">
+	<Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<!--<ListView ItemsSource="{Binding Steps}">
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
@@ -33,6 +33,23 @@
 					</ViewCell>
 				</DataTemplate>
 			</ListView.ItemTemplate>
-		</ListView>
-	</VerticalStackLayout>
+		</ListView>-->
+		<StackLayout Rotation="-90" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+			<ProgressBar Progress="{Binding OverallProgress}" ProgressColor="Orange" />
+		</StackLayout>
+		<StackLayout BindableLayout.ItemsSource="{Binding Steps}"
+								HorizontalOptions="Start"
+								VerticalOptions="FillAndExpand"
+								Spacing="5">
+			<BindableLayout.ItemTemplate>
+				<DataTemplate>
+					<StackLayout Orientation="Horizontal" VerticalOptions="Center">
+						<Label Text="{Binding Title}" VerticalOptions="Center" />
+						<BoxView Color="LightGray" WidthRequest="1" HeightRequest="50" Margin="5,0" />
+					</StackLayout>
+				</DataTemplate>
+			</BindableLayout.ItemTemplate>
+		</StackLayout>
+	</Grid>
 </ContentView>
