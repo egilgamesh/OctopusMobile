@@ -1,4 +1,4 @@
-namespace UserControl;
+namespace Yella.UserControl;
 
 public partial class TimelineTracker : ContentView
 {

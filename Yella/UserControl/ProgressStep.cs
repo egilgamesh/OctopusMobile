@@ -7,4 +7,5 @@ public sealed class ProgressStep
 	public DateTime EndingDate { get; set; }
 	public string Description { get; set; }
 	public string Status { get; set; }
+	public int Value { get; set; }
 }
