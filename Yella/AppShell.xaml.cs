@@ -40,10 +40,7 @@ public partial class AppShell : Shell
 	private void OnNextClicked(object sender, EventArgs e)
 	{
 		step++;
-		if (step == 2)
-		{
-
-		}
+		if (step == 2) { }
 	}
 
 	private int step = 0;
